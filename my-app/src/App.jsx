@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import {useDebounce} from 'react-use'
 import Hero from './components/Hero';
 import Search from './components/Search';
@@ -65,7 +65,7 @@ const App = () => {
   },[debounce])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path='/' element={
     <>
@@ -84,7 +84,7 @@ const App = () => {
       } />
       <Route path='/movie/:id' element={<MovieDetails/>}/>
      </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
